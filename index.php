@@ -1,10 +1,23 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "my_database";
+// Қосылу
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Қосылудың тексерілуі
+if ($conn->connect_error) {
+  die("Қосылу сәтсіз: " . $conn->connect_error);
+}
+echo "Қосылу сәтті!";
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Қонақ үйді брондау</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Бұрынғы CSS файлға сілтеме -->
+    <link rel="stylesheet" href="index.css"> <!-- Бұрынғы CSS файлға сілтеме -->
     <script src="index.js"></script> <!-- JavaScript файлға сілтеме -->
 </head>
 <body>
@@ -54,3 +67,4 @@
     </footer>
 </body>
 </html>
+?>
